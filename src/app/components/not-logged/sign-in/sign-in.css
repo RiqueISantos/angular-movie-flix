@@ -3,119 +3,67 @@
     color: #fff;
     padding: 50px 40px;
     border-radius: 10px;
-    box-sizing: border-box;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 #sign-in-container h1 {
-    font-size: 35px;
+    font-size: 32px;
     font-weight: 700;
-    margin-bottom: 30px;
-    text-align: center;
     font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     letter-spacing: 0.5px;
 }
 
-#sign-in-container form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-#sign-in-container input {
-    width: 100%;
-    padding: 16px 18px;
-    font-size: 15px;
+#sign-in-container .form-control {
     background-color: rgba(128, 128, 128, 0.5);
     border: none;
-    border-radius: 4px;
     color: #fff;
-    outline: none;
-    box-sizing: border-box;
+    padding: 16px 18px;
+    font-size: 15px;
 }
 
-#sign-in-container input::placeholder {
+#sign-in-container .form-control::placeholder {
     color: rgba(255, 255, 255, 0.6);
 }
 
-#sign-in-container input:focus {
+#sign-in-container .form-control:focus {
     background-color: rgba(128, 128, 128, 0.7);
-}
-
-#sign-in-container button {
-    width: 100%;
-    padding: 16px;
-    font-size: 16px;
-    font-weight: 600;
-    background-color: #e50914;
     color: #fff;
+    box-shadow: none;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 16px;
-    transition: background-color 0.3s;
-    box-sizing: border-box;
 }
 
-#sign-in-container button:hover {
+#sign-in-container .btn-danger {
+    background-color: #e50914;
+    border: none;
+    font-weight: 600;
+}
+
+#sign-in-container .btn-danger:hover {
     background-color: #f40612;
 }
 
-.login-link {
-    margin-top: 16px;
-    font-size: 14px;
-    text-align: center;
-}
-
-.login-link a {
-    color: #e50914;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.login-link a:hover {
-    text-decoration: underline;
-}
-
 .forgot-password {
-    display: block;
-    margin-top: 16px;
     font-size: 13px;
-    color: #fff;
-    text-decoration: none;
-    text-align: right;
 }
 
 .forgot-password:hover {
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
 
 .signup-link {
-    margin-top: 30px;
     font-size: 14px;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.signup-link a {
-    color: #e50914;
-    text-decoration: none;
-    font-weight: 600;
 }
 
 .signup-link a:hover {
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
 
 /* Responsividade */
-@media (max-width: 1200px) {
-    #sign-in-container {
-        padding: 30px 100px;
-    }
-}
-
 @media (max-width: 768px) {
     #sign-in-container {
-        padding: 30px 50px;
+        padding: 40px 30px;
+        max-width: 100%;
     }
 
     #sign-in-container h1 {
@@ -130,20 +78,15 @@
 
     #sign-in-container h1 {
         font-size: 24px;
-        margin-bottom: 15px;
     }
 
-    #sign-in-container input {
+    #sign-in-container .form-control {
         padding: 12px 16px;
         font-size: 14px;
     }
 
-    #sign-in-container button {
-        padding: 12px;
-        font-size: 15px;
-    }
-
-    .login-link {
+    .forgot-password,
+    .signup-link {
         font-size: 13px;
     }
 }
