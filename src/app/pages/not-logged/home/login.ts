@@ -6,7 +6,7 @@ import { SignIn } from '../../../components/not-logged/sign-in/sign-in';
   selector: 'app-home',
   standalone: true,
   imports: [Header, SignIn],
-  templateUrl: './home.html',
-  styleUrl: './home.css',
+  templateUrl: './login.html',
+  styleUrl: './login.css',
 })
-export class Home {}
+export class Login {}

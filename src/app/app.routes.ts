@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { SignIn } from './components/not-logged/sign-in/sign-in';
+import { Login } from './pages/not-logged/home/login';
 import { Home as HomeLogged } from  './pages/logged/home/home';
 import { Registration } from './pages/not-logged/registration/registration';
 
@@ -10,7 +10,7 @@ export const routes: Routes = [
     },
     {
         path: 'login',
-        component:  SignIn
+        component:  Login
     },
     {
         path: 'cadastre-se',
