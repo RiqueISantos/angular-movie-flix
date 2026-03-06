@@ -1,0 +1,21 @@
+#home-page {
+    background-color: #141414;
+    min-height: 100vh;
+}
+
+.section-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.row {
+    margin: 0;
+}
+
+/* Ajuste para os cards ficarem centralizados */
+.col-12, .col-md-6, .col-lg-4, .col-xl-3 {
+    display: flex;
+    justify-content: center;
+}

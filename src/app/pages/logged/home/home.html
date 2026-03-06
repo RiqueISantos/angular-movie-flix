@@ -1,7 +1,61 @@
-<app-header />
-<div>
-    <app-card />
-    <app-card />
-    <app-card />
-    <app-card />
+<div id="home-page">
+    <app-header />
+    
+    <div class="container-fluid px-5 py-4">
+        <h2 class="section-title mb-4">Filmes em Destaque</h2>
+        
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <app-card 
+                    title="O Poderoso Chefão"
+                    description="Don Corleone, chefe da máfia, precisa passar o legado para seu filho Michael, que reluta em assumir os negócios da família."
+                    duration="1:30h"
+                    ageRating="Somente +18"
+                    approval="67% Aprovação"
+                    platform="Claro TV"
+                    platformLogo="/patners/claro.png"
+                    [isTopTen]="true">
+                </app-card>
+            </div>
+            
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <app-card 
+                    title="Interestelar"
+                    description="Uma equipe de exploradores viaja através de um buraco de minhoca no espaço em uma tentativa de garantir a sobrevivência da humanidade."
+                    duration="2:49h"
+                    ageRating="Somente +12"
+                    approval="89% Aprovação"
+                    platform="Netflix"
+                    platformLogo="/patners/netflix.png"
+                    [isTopTen]="true">
+                </app-card>
+            </div>
+            
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <app-card 
+                    title="Parasita"
+                    description="Toda a família de Ki-taek está desempregada, vivendo em um porão sujo e apertado. Uma obra-prima do cinema coreano."
+                    duration="2:12h"
+                    ageRating="Somente +16"
+                    approval="95% Aprovação"
+                    platform="Disney+"
+                    platformLogo="/patners/Disney+.png"
+                    [isTopTen]="false">
+                </app-card>
+            </div>
+            
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <app-card 
+                    title="Matrix"
+                    description="Um hacker descobre a verdadeira natureza de sua realidade e seu papel na guerra contra seus controladores."
+                    duration="2:16h"
+                    ageRating="Somente +14"
+                    approval="87% Aprovação"
+                    platform="HBO Max"
+                    platformLogo="/patners/HBO_Max-removebg-preview.png"
+                    [isTopTen]="false">
+                </app-card>
+            </div>
+        </div>
+    </div>
 </div>
