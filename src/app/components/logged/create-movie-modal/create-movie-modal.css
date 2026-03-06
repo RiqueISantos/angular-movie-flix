@@ -1,0 +1,206 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.modal-container {
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.98) 0%, rgba(15, 15, 15, 0.98) 100%);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 900px;
+    padding: 0;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+    position: relative;
+}
+
+.modal-header {
+    background-color: #000;
+    padding: 30px;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-button {
+    position: absolute;
+    left: 30px;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(229, 9, 20, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.back-button:hover {
+    background-color: #e50914;
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(229, 9, 20, 0.5);
+}
+
+.back-button svg {
+    color: #fff;
+}
+
+.modal-logo {
+    height: 60px;
+    width: auto;
+}
+
+.modal-title {
+    color: #e50914;
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.modal-content {
+    padding: 40px 50px 50px;
+}
+
+.form-title {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.movie-form .form-control,
+.movie-form .form-select {
+    background-color: rgba(60, 60, 60, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 14px 18px;
+    font-size: 15px;
+    border-radius: 6px;
+}
+
+.movie-form .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.movie-form .form-control:focus,
+.movie-form .form-select:focus {
+    background-color: rgba(70, 70, 70, 0.9);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    box-shadow: 0 0 0 0.2rem rgba(229, 9, 20, 0.25);
+}
+
+.movie-form .form-select {
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+}
+
+.movie-form .form-select option {
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #e50914;
+    pointer-events: none;
+}
+
+.select-with-icon {
+    position: relative;
+}
+
+.select-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #e50914;
+    pointer-events: none;
+    stroke: #e50914;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.movie-form .form-select {
+    background-image: none;
+    padding-right: 45px;
+}
+
+.movie-form textarea.form-control {
+    resize: none;
+    min-height: 48px;
+}
+
+.btn-danger {
+    background-color: #e50914;
+    border: none;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 14px 60px;
+    transition: all 0.3s;
+}
+
+.btn-danger:hover {
+    background-color: #f40612;
+    transform: scale(1.02);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .modal-container {
+        max-width: 100%;
+    }
+    
+    .modal-title {
+        font-size: 36px;
+    }
+    
+    .modal-content {
+        padding: 30px 25px;
+    }
+    
+    .form-title {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+    
+    .movie-form .form-control,
+    .movie-form .form-select {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+    
+    .btn-danger {
+        padding: 12px 40px;
+        font-size: 16px;
+    }
+}
