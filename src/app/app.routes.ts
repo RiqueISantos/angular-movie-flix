@@ -7,18 +7,22 @@ import { CreateMoviePage } from './pages/logged/create-movie/create-movie';
 export const routes: Routes = [
     {
         path: '',
-        component:  HomeLogged
+        component: Login
     },
     {
         path: 'login',
-        component:  Login
+        component: Login
+    },
+    {
+        path: 'home',
+        component: HomeLogged
     },
     {
         path: 'cadastre-se',
-        component:  Registration
+        component: Registration
     },
     {
         path: 'cadastrar-filme',
-        component:  CreateMoviePage
+        component: CreateMoviePage
     }
 ];
