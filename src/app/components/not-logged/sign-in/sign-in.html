@@ -1,17 +1,63 @@
 <div id="sign-in-container" class="container">
     <div class="row justify-content-center">
         <div class="col-12">
-            <h1 class="text-center mb-4">Entre na sua conta</h1>
+            <h1 class="text-center mb-4">Entrar</h1>
             
-            <form>
+            @if (errorMessage) {
+                <div class="alert alert-danger" role="alert">
+                    {{ errorMessage }}
+                </div>
+            }
+            
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                 <div class="mb-3">
-                    <input type="email" class="form-control form-control-lg" placeholder="E-mail ou número de telefone" />
+                    <input 
+                        type="email" 
+                        class="form-control form-control-lg" 
+                        placeholder="Seu melhor e-mail"
+                        formControlName="email"
+                        [class.is-invalid]="email?.invalid && email?.touched" />
+                    @if (email?.invalid && email?.touched) {
+                        <div class="invalid-feedback">
+                            @if (email?.errors?.['required']) {
+                                Email é obrigatório
+                            }
+                            @if (email?.errors?.['email']) {
+                                Email inválido
+                            }
+                        </div>
+                    }
                 </div>
                 <div class="mb-3">
-                    <input type="password" class="form-control form-control-lg" placeholder="Sua senha" />
+                    <input 
+                        type="password" 
+                        class="form-control form-control-lg" 
+                        placeholder="Sua senha"
+                        formControlName="password"
+                        [class.is-invalid]="password?.invalid && password?.touched" />
+                    @if (password?.invalid && password?.touched) {
+                        <div class="invalid-feedback">
+                            @if (password?.errors?.['required']) {
+                                Senha é obrigatória
+                            }
+                            @if (password?.errors?.['minlength']) {
+                                Senha deve ter no mínimo 6 caracteres
+                            }
+                        </div>
+                    }
                 </div>
                 
-                <button type="submit" class="btn btn-danger btn-lg w-100 mt-3">Entrar na conta</button>
+                <button 
+                    type="submit" 
+                    class="btn btn-danger btn-lg w-100 mt-3"
+                    [disabled]="isLoading">
+                    @if (isLoading) {
+                        <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                        Entrando...
+                    } @else {
+                        Entrar na conta
+                    }
+                </button>
             </form>
             
             <div class="text-end mt-3">
