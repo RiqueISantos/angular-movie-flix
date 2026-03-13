@@ -3,6 +3,7 @@ import { Login } from './pages/not-logged/home/login';
 import { Home as HomeLogged } from  './pages/logged/home/home';
 import { Registration } from './pages/not-logged/registration/registration';
 import { CreateMoviePage } from './pages/logged/create-movie/create-movie';
+import { authGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
     {
@@ -15,7 +16,8 @@ export const routes: Routes = [
     },
     {
         path: 'home',
-        component: HomeLogged
+        component: HomeLogged,
+        canActivate: [authGuard]
     },
     {
         path: 'cadastre-se',
@@ -23,6 +25,7 @@ export const routes: Routes = [
     },
     {
         path: 'cadastrar-filme',
-        component: CreateMoviePage
+        component: CreateMoviePage,
+        canActivate: [authGuard]
     }
 ];
